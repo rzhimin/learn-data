@@ -1,13 +1,17 @@
-import React from "react";
-import ReactDOM from "react-dom";
+import React from 'react';
+import ReactDOM from 'react-dom/client';
+import './index.css';
+import App from './App';
+import reportWebVitals from './reportWebVitals';
 
-// // 引入我的第一个Class组件
-import App1 from "./components/class_component";
-// ReactDOM.render(<App1/>,document.getElementById('root'))
+const root = ReactDOM.createRoot(document.getElementById('root'));
+root.render(
+  <React.StrictMode>
+    <App />
+  </React.StrictMode>
+);
 
-// // 引入我的第一个Function组件
-import App2 from "./components/function_comp";
-// ReactDOM.render(<App2/>, document.getElementById('root'))
-
-// 引入多组件使用数组
-ReactDOM.render([<App1 />, <App2 />, <h1>test</h1>], document.getElementById('root'))
+// If you want to start measuring performance in your app, pass a function
+// to log results (for example: reportWebVitals(console.log))
+// or send to an analytics endpoint. Learn more: https://bit.ly/CRA-vitals
+reportWebVitals();
